@@ -1,12 +1,5 @@
-/**
- *
- * @param {import('sequelize').Sequelize} sequelize
- * @param {*} DataTypes
- * @returns
- */
-
 const UserModel = (sequelize, DataTypes) => {
-    const User = sequelize.define('User', {
+    const User = sequelize.define('user', {
       id: {
         type: DataTypes.STRING,
         primaryKey: true,
@@ -18,9 +11,9 @@ const UserModel = (sequelize, DataTypes) => {
       password: DataTypes.STRING,
       image: DataTypes.STRING
     }, {
-        tableName: 'users',
         underscored: true,
-        timestamps: false,
+        tableName: 'users',
+        timestamps: false
     });
     return User;
   };
