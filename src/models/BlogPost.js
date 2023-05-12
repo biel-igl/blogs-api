@@ -6,7 +6,7 @@
  */
 
 const blogPostModel = (sequelize, DataTypes) => {
-    const BlogPosts = sequelize.define('blogPosts', {
+    const BlogPosts = sequelize.define('BlogPost', {
         id:
           {
             type: DataTypes.STRING,
@@ -37,7 +37,7 @@ const blogPostModel = (sequelize, DataTypes) => {
       },
     );
     BlogPosts.associate = (models)=>{
-        BlogPosts.belongsTo(models.user,
+        BlogPosts.belongsTo(models.User,
             {
                 foreignKey: 'userId', as: 'users'
             })
