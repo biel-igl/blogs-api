@@ -6,7 +6,7 @@
  */
 
 const CategoriesModel = (sequelize, DataTypes) => {
-  const Category = sequelize.define('categories', {
+  const Category = sequelize.define('Category', {
       id:
         {
           type: DataTypes.STRING,
