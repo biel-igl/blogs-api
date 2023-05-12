@@ -22,7 +22,7 @@ const blogPostModel = (sequelize, DataTypes) => {
             foreignKey: true,
             references:
               {
-                model: 'Users',
+                model: 'users',
                 key: 'id'
               }
           },
