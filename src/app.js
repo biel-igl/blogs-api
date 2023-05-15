@@ -15,6 +15,8 @@ app.get('/', (_request, response) => {
 
 app.post('/login', validateLogin, login);
 app.post('/user', validadeNewUser, userControler.createUser);
+app.get('/user/:id', userControler.getById);
+app.get('/user', userControler.getAll);
 
 // É importante exportar a constante `app`,
 // para que possa ser utilizada pelo arquivo `src/server.js`
